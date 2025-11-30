@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – Badibanga Moushe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #0b5ed7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    h2 {
+      margin-top: 0;
+      color: #0b5ed7;
+      font-size: 20px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    a {
+      color: #0b5ed7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    label {
+      display: block;
+      margin: 10px 0 4px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    .inline {
+      display: flex;
+      gap: 10px;
+    }
+    .inline > div {
+      flex: 1;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #0b5ed7;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0948a5;
+    }
+    .small {
+      font-size: 12px;
+      color: #777;
+      margin-top: 5px;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      padding: 10px;
+      color: #666;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Contact – Badibanga Moushe</h1>
+  <p>Projets Sports & Jeunesse – Candidatures et Partenariats</p>
+</header>
+
+<div class="container">
+
+  <!-- COORDONNÉES -->
+  <section class="card">
+    <h2>Mes coordonnées</h2>
+    <p>Vous pouvez me contacter directement :</p>
+    <ul>
+      <li>📞 Téléphone : <a href="tel:+243851882645">+243 851 882 645</a></li>
+      <li>💬 WhatsApp : <a href="https://wa.me/243851882645" target="_blank" rel="noopener">Envoyer un message WhatsApp</a></li>
+      <li>✉️ Email : <a href="mailto:mousheservice@gmail.com">mousheservice@gmail.com</a></li>
+      <li>📍 Ville / Pays : Kinshasa, République Démocratique du Congo</li>
+    </ul>
+  </section>
+
+  <!-- CANDIDATURES DES JEUNES -->
+  <section class="card">
+    <h2>Candidatures des jeunes</h2>
+    <p>Formulaire réservé aux jeunes (sportifs, porteurs de projets, etc.).</p>
+
+    <form action="mailto:mousheservice@gmail.com" method="post" enctype="text/plain">
+      <div class="inline">
+        <div>
+          <label for="nom_jeune">Nom complet</label>
+          <input type="text" id="nom_jeune" name="Nom complet" required>
+        </div>
+        <div>
+          <label for="age_jeune">Âge</label>
+          <input type="number" id="age_jeune" name="Âge" min="8" max="35" required>
+        </div>
+      </div>
+
+      <div class="inline">
+        <div>
+          <label for="ville_jeune">Ville</label>
+          <input type="text" id="ville_jeune" name="Ville" required>
+        </div>
+        <div>
+          <label for="pays_jeune">Pays</label>
+          <input type="text" id="pays_jeune" name="Pays" value="RDC">
+        </div>
+      </div>
+
+      <label for="tel_jeune">Téléphone / WhatsApp</label>
+      <input type="text" id="tel_jeune" name="Téléphone" required>
+
+      <label for="domaine_jeune">Sport / domaine</label>
+      <input type="text" id="domaine_jeune" name="Sport ou domaine" placeholder="Ex : Football, Basket, Athlétisme, Danse, ..." required>
+
+      <label for="motivation_jeune">Motivation / message</label>
+      <textarea id="motivation_jeune" name="Motivation" placeholder="Explique ton projet, ton parcours ou ta demande..." required></textarea>
+
+      <button type="submit">Envoyer ma candidature</button>
+      <p class="small">Un email sera préparé automatiquement avec les informations que vous avez saisies.</p>
+    </form>
+  </section>
+
+  <!-- PARTENAIRES / SOUTIENS -->
+  <section class="card">
+    <h2>Soutiens & Partenariats</h2>
+    <p>Formulaire pour partenaires, entreprises, institutions et mécènes.</p>
+
+    <form action="mailto:mousheservice@gmail.com" method="post" enctype="text/plain">
+      <label for="organisation">Organisation / entreprise</label>
+      <input type="text" id="organisation" name="Organisation" required>
+
+      <div class="inline">
+        <div>
+          <label for="responsable">Nom du responsable</label>
+          <input type="text" id="responsable" name="Nom du responsable" required>
+        </div>
+        <div>
+          <label for="fonction">Fonction</label>
+          <input type="text" id="fonction" name="Fonction">
+        </div>
+      </div>
+
+      <label for="tel_partenaire">Téléphone</label>
+      <input type="text" id="tel_partenaire" name="Téléphone" required>
+
+      <label for="email_partenaire">Email</label>
+      <input type="email" id="email_partenaire" name="Email" required>
+
+      <label for="type_soutien">Type de soutien</label>
+      <select id="type_soutien" name="Type de soutien">
+        <option value="Financier">Soutien financier</option>
+        <option value="Matériel">Soutien matériel / équipement</option>
+        <option value="Expertise">Expertise / accompagnement technique</option>
+        <option value="Communication">Communication / visibilité</option>
+        <option value="Autre">Autre</option>
+      </select>
+
+      <label for="details_soutien">Détails de la proposition</label>
+      <textarea id="details_soutien" name="Détails du soutien" placeholder="Expliquez votre proposition, votre vision et vos attentes..." required></textarea>
+
+      <button type="submit">Proposer un partenariat</button>
+      <p class="small">Un email sera préparé automatiquement avec les informations de votre organisation.</p>
+    </form>
+  </section>
+
+</div>
+
+<footer>
+  &copy; <span id="year"></span> Badibanga Moushe – Tous droits réservés.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
