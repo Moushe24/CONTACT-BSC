@@ -37,24 +37,44 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 12px;
     }
     .brand {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       font-weight: 700;
       font-size: 18px;
     }
-    .brand span {
+    .brand-logo {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 26px;
-      height: 26px;
-      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      overflow: hidden;
       background: linear-gradient(135deg, #ff0040, #007bff);
-      font-size: 14px;
+      flex-shrink: 0;
     }
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .brand-text strong {
+      font-size: 16px;
+    }
+    .brand-text span {
+      font-size: 11px;
+      color: #b0b3c1;
+    }
+
     .nav-links {
       display: flex;
       gap: 18px;
@@ -76,6 +96,7 @@
       font-size: 13px;
       font-weight: bold;
       cursor: pointer;
+      white-space: nowrap;
     }
 
     main {
@@ -96,7 +117,7 @@
       margin-bottom: 18px;
     }
 
-    /* HERO KIMI STYLE */
+    /* HERO */
     .hero {
       margin-top: 20px;
       border-radius: 24px;
@@ -251,6 +272,55 @@
       background: #050816;
     }
 
+    /* ANIMATIONS */
+    .hero,
+    .card,
+    .nav-cta,
+    .btn-primary,
+    .btn-secondary,
+    form,
+    .contact-grid > div {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.5);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      background: #ffc94b;
+    }
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .nav-cta:hover {
+      transform: translateY(-1px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .brand-logo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .hero { animation: fadeUp 0.7s ease-out forwards; }
+    .card { animation: fadeUp 0.8s ease-out forwards; }
+    form { animation: fadeUp 0.9s ease-out forwards; }
+    .contact-grid > div { animation: fadeUp 1s ease-out forwards; }
+
     /* RESPONSIVE */
     @media (max-width: 900px) {
       .grid-3,
@@ -263,19 +333,22 @@
         align-items: flex-start;
       }
     }
-    @mé dias(largeur maximale: 640px) {
-    .liens de navigation{
-        afficher:flex;
-        flex-wrap:wrap;
-        gap:10px;
-        taille de police:14px;
-    }
-    .titre de héros{
-        taille de police: 22px;
-    }
-    principal{
-        rembourrage: 16px 12px 40px;
-    }
+    @media (max-width: 640px) {
+      .nav {
+        flex-wrap: wrap;
+      }
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 13px;
+      }
+      .hero-title {
+        font-size: 22px;
+      }
+      main {
+        padding: 16px 12px 40px;
+      }
     }
 
     html {
@@ -288,8 +361,16 @@
 <header>
   <div class="nav">
     <div class="brand">
-      <span>B</span> BSC – Sport & Éducation
+      <div class="brand-logo">
+        <!-- Mets ici ton fichier logo -->
+        <img src="logo-bsc.png" alt="Logo BSC">
+      </div>
+      <div class="brand-text">
+        <strong>BSC – Sport & Éducation</strong>
+        <span>Bourse Sportive Congolaise</span>
+      </div>
     </div>
+
     <nav class="nav-links">
       <a href="#accueil">Accueil</a>
       <a href="#programmes">Programmes</a>
@@ -297,6 +378,7 @@
       <a href="#partenariats">Partenariats</a>
       <a href="#contact">Contact</a>
     </nav>
+
     <button class="nav-cta" onclick="document.getElementById('candidature').scrollIntoView({behavior:'smooth'})">
       Postuler maintenant
     </button>
@@ -341,7 +423,7 @@
         <div class="pill">Jeunes Talents</div>
         <h3>Sport & École</h3>
         <p>
-          Suivi des jeunes sportifs scolarisés&nbsp;: performances sportives,
+          Suivi des jeunes sportifs scolarisés : performances sportives,
           résultats scolaires, comportement et discipline, avec l’implication des familles et des clubs.
         </p>
       </div>
