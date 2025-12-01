@@ -10,14 +10,12 @@
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: Arial, sans-serif;
       background: #050816;
-      color: #fff;
+      color: #ffffff;
       line-height: 1.6;
     }
-
     a {
       text-decoration: none;
       color: inherit;
@@ -29,217 +27,137 @@
       top: 0;
       z-index: 50;
       background: rgba(5, 8, 22, 0.98);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.03);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
     }
-
     .nav {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 12px 16px;
+      padding: 10px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-
     .brand {
       display: flex;
       align-items: center;
       gap: 8px;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 18px;
     }
-
     .brand span {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       border-radius: 8px;
       background: linear-gradient(135deg, #ff0040, #007bff);
-      font-size: 16px;
+      font-size: 14px;
     }
-
     .nav-links {
       display: flex;
       gap: 18px;
       font-size: 14px;
     }
-
     .nav-links a {
-      padding: 4px 0;
+      padding-bottom: 4px;
       border-bottom: 2px solid transparent;
     }
-
     .nav-links a:hover {
       border-bottom-color: #ffb703;
     }
-
     .nav-cta {
-      padding: 8px 14px;
+      padding: 8px 16px;
       border-radius: 999px;
       background: linear-gradient(135deg, #ff0040, #007bff);
+      border: none;
+      color: #fff;
       font-size: 13px;
       font-weight: bold;
       cursor: pointer;
-      border: none;
     }
 
-    /* LAYOUT GÉNÉRAL */
     main {
       max-width: 1100px;
       margin: 0 auto;
       padding: 24px 16px 60px;
     }
-
     section {
-      margin-bottom: 64px;
+      margin-bottom: 60px;
     }
-
     h2.section-title {
       font-size: 24px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
-
     .section-subtitle {
       font-size: 14px;
       color: #b0b3c1;
-      margin-bottom: 16px;
-    }
-
-    /* HERO */
-    .hero {
-      margin-top: 24px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 24px;
-      align-items: center;
-    }
-
-    .hero-left {
-      background: radial-gradient(circle at top left, #ff0040, transparent 60%),
-                  radial-gradient(circle at bottom right, #007bff, transparent 55%);
-      border-radius: 24px;
-      padding: 32px 28px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.45);
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.35);
-      font-size: 12px;
-      margin-bottom: 16px;
-    }
-
-    .hero-badge span.dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #ffb703;
-    }
-
-    .hero-title {
-      font-size: 30px;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    .hero-text {
-      font-size: 15px;
-      margin-bottom: 24px;
-      max-width: 520px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
       margin-bottom: 18px;
     }
 
+    /* HERO KIMI STYLE */
+    .hero {
+      margin-top: 20px;
+      border-radius: 24px;
+      padding: 30px 24px;
+      background: linear-gradient(135deg, #ff0040, #007bff);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+      color: #fff;
+    }
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .hero-text {
+      font-size: 15px;
+      max-width: 520px;
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
     .btn-primary {
       padding: 10px 18px;
       border-radius: 999px;
+      border: none;
       background: #ffb703;
       color: #000;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
+      font-weight: 700;
       font-size: 14px;
+      cursor: pointer;
     }
-
     .btn-secondary {
       padding: 10px 18px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.4);
+      border: 1px solid rgba(255,255,255,0.8);
       background: transparent;
       color: #fff;
       font-size: 14px;
       cursor: pointer;
     }
-
-    .hero-note {
+    .hero-bottom {
+      margin-top: 16px;
       font-size: 12px;
-      color: #f1f1f1;
       opacity: 0.9;
     }
 
-    .hero-right {
-      background: #081226;
-      border-radius: 24px;
-      padding: 20px 18px;
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 16px 35px rgba(0,0,0,0.5);
-    }
-
-    .hero-right h3 {
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-
-    .hero-right p {
-      font-size: 13px;
-      color: #c3c7d4;
-      margin-bottom: 12px;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .stat-card {
-      background: #050816;
-      border-radius: 14px;
-      padding: 10px;
-      border: 1px solid rgba(255,255,255,0.05);
-      font-size: 12px;
-    }
-
-    .stat-value {
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .stat-label {
-      color: #b0b3c1;
-      font-size: 11px;
-    }
-
-    /* CARTES EN LIGNES */
+    /* BLOCS */
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3,minmax(0,1fr));
       gap: 16px;
     }
-
     .card {
       background: #081226;
       border-radius: 18px;
@@ -248,28 +166,25 @@
       font-size: 13px;
       min-height: 150px;
     }
-
     .card h3 {
       font-size: 15px;
       margin-bottom: 8px;
     }
-
     .pill {
       display: inline-flex;
       padding: 3px 8px;
       border-radius: 999px;
+      background: rgba(255,255,255,0.08);
       font-size: 11px;
-      background: rgba(255,255,255,0.06);
       margin-bottom: 6px;
     }
 
-    /* CANDIDATURE / PARTENARIATS FORMULAIRES */
+    /* FORMULAIRES */
     .form-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
       gap: 24px;
     }
-
     form {
       background: #081226;
       border-radius: 18px;
@@ -277,69 +192,60 @@
       border: 1px solid rgba(255,255,255,0.06);
       font-size: 13px;
     }
-
     label {
       display: block;
       font-size: 12px;
       margin: 8px 0 4px;
     }
-
     input, select, textarea {
       width: 100%;
       padding: 8px;
       border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.18);
       background: #050816;
       color: #fff;
       font-size: 13px;
     }
-
     textarea {
       min-height: 80px;
       resize: vertical;
     }
-
     .inline {
       display: flex;
       gap: 10px;
     }
-
     .inline > div {
       flex: 1;
     }
-
     .small {
       font-size: 11px;
       color: #b0b3c1;
       margin-top: 6px;
     }
 
-    /* CONTACT / FOOTER */
+    /* CONTACT */
     .contact-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);
       gap: 18px;
       font-size: 13px;
     }
-
     .contact-grid h3 {
       font-size: 15px;
       margin-bottom: 6px;
     }
-
     .contact-item {
       margin-bottom: 6px;
     }
-
     .contact-link {
       color: #ffb703;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     footer {
       border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 16px;
       text-align: center;
+      padding: 14px;
       font-size: 11px;
       color: #b0b3c1;
       background: #050816;
@@ -347,20 +253,25 @@
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
-      .hero, .form-grid, .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
+      .grid-3,
+      .form-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+      .hero-top {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
-
     @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
       .hero-title {
-        font-size: 24px;
+        font-size: 22px;
       }
-      .grid-3 {
-        grid-template-columns: minmax(0, 1fr);
+      main {
+        padding: 16px 12px 40px;
       }
     }
 
@@ -374,7 +285,7 @@
 <header>
   <div class="nav">
     <div class="brand">
-      <span>B</span> Bourse Sportive Congolaise
+      <span>B</span> BSC – Sport & Éducation
     </div>
     <nav class="nav-links">
       <a href="#accueil">Accueil</a>
@@ -390,104 +301,76 @@
 </header>
 
 <main>
-
-  <!-- HERO / ACCUEIL -->
+  <!-- HERO -->
   <section id="accueil" class="hero">
-    <div class="hero-left">
-      <div class="hero-badge">
-        <span class="dot"></span>
-        Programme pilote – RDC
+    <div class="hero-top">
+      <div>
+        <h1 class="hero-title">Prêt à relever le défi&nbsp;?</h1>
+        <p class="hero-text">
+          Rejoignez la prochaine génération de champions académiques et sportifs de la RDC.
+          La Bourse Sportive Congolaise (BSCO) accompagne les jeunes talents tout en luttant
+          contre la délinquance juvénile.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="document.getElementById('candidature').scrollIntoView({behavior:'smooth'})">
+            Postuler maintenant
+          </button>
+          <button class="btn-secondary" onclick="document.getElementById('programmes').scrollIntoView({behavior:'smooth'})">
+            En savoir plus
+          </button>
+        </div>
       </div>
-      <h1 class="hero-title">Prêt à relever le défi&nbsp;?</h1>
-      <p class="hero-text">
-        Rejoignez la prochaine génération de champions académiques et sportifs de la RDC.
-        La Bourse Sportive Congolaise soutient les jeunes talents tout en luttant contre la délinquance juvénile.
-      </p>
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="document.getElementById('candidature').scrollIntoView({behavior:'smooth'})">
-          Postuler maintenant
-        </button>
-        <button class="btn-secondary" onclick="document.getElementById('programmes').scrollIntoView({behavior:'smooth'})">
-          En savoir plus
-        </button>
-      </div>
-      <p class="hero-note">
-        🎯 Public cible : collégiens, lycéens, étudiants et jeunes sportifs motivés (RDC & diaspora).
-      </p>
     </div>
-
-    <aside class="hero-right">
-      <h3>BSCO – Sport & Éducation</h3>
-      <p>
-        Un dispositif innovant qui combine encadrement sportif, accompagnement scolaire et mentorat social,
-        avec la participation d’écoles, de clubs, de familles et de partenaires privés.
-      </p>
-      <div class="stat-grid">
-        <div class="stat-card">
-          <div class="stat-value">3</div>
-          <div class="stat-label">Axes majeurs : Sport, Éducation, Citoyenneté</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">+RDC</div>
-          <div class="stat-label">Ciblage prioritaire des quartiers populaires et des écoles publiques</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">Partenaires</div>
-          <div class="stat-label">Ouvert aux ONG, entreprises, institutions et mécènes</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">Impact</div>
-          <div class="stat-label">Prévenir les dérives, offrir des perspectives concrètes</div>
-        </div>
-      </div>
-    </aside>
+    <div class="hero-bottom">
+      🎯 Public cible : collégiens, lycéens, étudiants et jeunes sportifs motivés en RDC et dans la diaspora.
+    </div>
   </section>
 
   <!-- PROGRAMMES -->
   <section id="programmes">
-    <h2 class="section-title">Nos programmes</h2>
+    <h2 class="section-title">Programmes BSCO</h2>
     <p class="section-subtitle">
-      La BSCO structure son action autour de plusieurs parcours adaptés aux réalités des jeunes congolais.
+      La BSCO propose plusieurs axes pour répondre aux réalités des jeunes congolais.
     </p>
 
     <div class="grid-3">
       <div class="card">
-        <div class="pill">Programme Jeunes Talents</div>
-        <h3>Parcours Sport & École</h3>
+        <div class="pill">Jeunes Talents</div>
+        <h3>Sport & École</h3>
         <p>
-          Accompagnement des jeunes sportifs en âge scolaire avec un double suivi&nbsp;:
-          performance sportive (club / académie) et réussite scolaire (notes, comportement, assiduité).
+          Suivi des jeunes sportifs scolarisés&nbsp;: performances sportives,
+          résultats scolaires, comportement et discipline, avec l’implication des familles et des clubs.
         </p>
       </div>
       <div class="card">
         <div class="pill">Programme Communautaire</div>
         <h3>Quartiers & Terrains</h3>
         <p>
-          Tournois encadrés, animations sportives et ateliers de sensibilisation dans les communes,
-          pour occuper les jeunes et réduire les violences urbaines et la délinquance.
+          Tournois, animations sportives et ateliers de sensibilisation dans les quartiers populaires
+          pour occuper les jeunes et prévenir les dérives.
         </p>
       </div>
       <div class="card">
-        <div class="pill">Programme Partenaires</div>
-        <h3>Soutien & Bourses</h3>
+        <div class="pill">Partenaires & Mécènes</div>
+        <h3>Bourses & Soutiens</h3>
         <p>
-          Mise en place de bourses ciblées, dotations en équipements, parrainage d’équipes scolaires,
-          et financement de projets sportifs portés par les jeunes.
+          Bourses ciblées, dotations en équipements, parrainage d’équipes scolaires ou d’initiatives
+          menées par les jeunes eux-mêmes.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- CANDIDATURE & PARTENARIATS -->
+  <!-- CANDIDATURES + PARTENARIATS -->
   <section id="candidature">
     <h2 class="section-title">Candidatures & Partenariats</h2>
     <p class="section-subtitle">
-      Les formulaires ci-dessous permettent aux jeunes de déposer leur candidature et aux partenaires de proposer un soutien.
-      Toutes les réponses arrivent directement dans la boîte mail officielle de la BSCO.
+      Les formulaires ci-dessous permettent aux jeunes de postuler et aux partenaires de proposer un soutien.
+      Toutes les demandes arrivent directement dans la boîte mail officielle.
     </p>
 
     <div class="form-grid">
-      <!-- FORM JEUNES -->
+      <!-- JEUNES -->
       <form action="mailto:mousheservice@gmail.com" method="post" enctype="text/plain">
         <h3>Candidature Jeune / Sportif</h3>
 
@@ -514,21 +397,21 @@
         </div>
 
         <label for="tel_jeune">Téléphone / WhatsApp</label>
-        <input type="text" id="tel_jeune" name="Téléphone" required>
+        <input type="text" id="tel_jeune" name="Téléphone" placeholder="+243..." required>
 
         <label for="domaine_jeune">Sport / domaine</label>
-        <input type="text" id="domaine_jeune" name="Sport ou domaine" placeholder="Ex : Football, Basket, Judo, Athlétisme, ..." required>
+        <input type="text" id="domaine_jeune" name="Sport ou domaine" placeholder="Football, Basket, Athlétisme, Danse, ..." required>
 
         <label for="motivation_jeune">Motivation / message</label>
-        <textarea id="motivation_jeune" name="Motivation" placeholder="Explique ton parcours, ton contexte et ce que tu attends de la BSCO." required></textarea>
+        <textarea id="motivation_jeune" name="Motivation" placeholder="Explique ton parcours, ta situation et ce que tu attends de la BSCO." required></textarea>
 
         <button type="submit" class="btn-primary">Envoyer ma candidature</button>
         <p class="small">
-          En cliquant sur « Envoyer », un email sera généré vers <strong>mousheservice@gmail.com</strong> avec les informations saisies.
+          Un email sera généré vers <strong>mousheservice@gmail.com</strong> avec toutes les informations que tu as saisies.
         </p>
       </form>
 
-      <!-- FORM PARTENAIRES -->
+      <!-- PARTENAIRES -->
       <form id="partenariats" action="mailto:mousheservice@gmail.com" method="post" enctype="text/plain">
         <h3>Proposition de Partenariat / Soutien</h3>
 
@@ -562,7 +445,7 @@
         </select>
 
         <label for="details_soutien">Détails de la proposition</label>
-        <textarea id="details_soutien" name="Détails du soutien" placeholder="Expliquez votre vision, vos attentes et le type de partenariat envisagé." required></textarea>
+        <textarea id="details_soutien" name="Détails du soutien" placeholder="Expliquez votre vision, vos attentes et les modalités possibles de partenariat." required></textarea>
 
         <button type="submit" class="btn-secondary">Proposer un partenariat</button>
         <p class="small">
@@ -576,19 +459,18 @@
   <section id="contact">
     <h2 class="section-title">Contact & Coordonnées</h2>
     <p class="section-subtitle">
-      Pour toute question, proposition ou collaboration stratégique, vous pouvez utiliser les formulaires ci-dessus
-      ou les coordonnées ci-dessous.
+      Pour toute question, candidature spéciale ou projet de collaboration, vous pouvez utiliser les formulaires ci-dessus
+      ou les coordonnées suivantes.
     </p>
 
     <div class="contact-grid">
       <div>
         <h3>Bourse Sportive Congolaise (BSCO)</h3>
         <p>
-          Dispositif de soutien aux jeunes talents sportifs et académiques de la RDC, porté par Badibanga Moushe.
-          Objectif&nbsp;: structurer une réponse concrète à la délinquance juvénile par le sport, l’école et le mentorat.
+          Initiative portée par <strong>Badibanga Moushe</strong>, visant à accompagner les jeunes
+          par le sport, l’éducation et le mentorat, avec une attention particulière aux quartiers populaires et aux écoles publiques.
         </p>
       </div>
-
       <div>
         <h3>Contact direct</h3>
         <p class="contact-item">
@@ -606,16 +488,14 @@
           <a class="contact-link" href="mailto:mousheservice@gmail.com">mousheservice@gmail.com</a>
         </p>
       </div>
-
       <div>
         <h3>Liens rapides</h3>
         <p class="contact-item"><a class="contact-link" href="#programmes">Nos programmes</a></p>
-        <p class="contact-item"><a class="contact-link" href="#candidature">Candidature Jeune</a></p>
+        <p class="contact-item"><a class="contact-link" href="#candidature">Candidature jeune</a></p>
         <p class="contact-item"><a class="contact-link" href="#partenariats">Proposer un partenariat</a></p>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer>
@@ -627,4 +507,4 @@
 </script>
 
 </body>
-  </html>
+</html>
