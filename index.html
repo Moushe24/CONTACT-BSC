@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Contact – Badibanga Moushe</title>
+  <title>Bourse sportive congolaise</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -110,7 +110,7 @@
 <body>
 
 <header>
-  <h1>Contact – Badibanga Moushe</h1>
+  <h1>Bourse sportive congolaise</h1>
   <p>Projets Sports & Jeunesse – Candidatures et Partenariats</p>
 </header>
 
@@ -156,8 +156,8 @@
         </div>
       </div>
 
-      <label for="tel_jeune">Téléphone / WhatsApp</label>
-      <input type="text" id="tel_jeune" name="Téléphone" required>
+      <label for="tel_jeune">Téléphone / WhatsApp (format international, ex. +243851882645)</label>
+      <input type="tel" id="tel_jeune" name="Téléphone" pattern="^+?[1-9]d{7,14}$" placeholder="+243851882645" title="Format E.164. Exemple : +243851882645" required>
 
       <label for="domaine_jeune">Sport / domaine</label>
       <input type="text" id="domaine_jeune" name="Sport ou domaine" placeholder="Ex : Football, Basket, Athlétisme, Danse, ..." required>
@@ -190,8 +190,8 @@
         </div>
       </div>
 
-      <label for="tel_partenaire">Téléphone</label>
-      <input type="text" id="tel_partenaire" name="Téléphone" required>
+      <label for="tel_partenaire">Téléphone (format international, ex. +243851882645)</label>
+      <input type="tel" id="tel_partenaire" name="Téléphone" pattern="^+?[1-9]d{7,14}$" placeholder="+243851882645" title="Format E.164. Exemple : +243851882645" required>
 
       <label for="email_partenaire">Email</label>
       <input type="email" id="email_partenaire" name="Email" required>
@@ -216,7 +216,7 @@
 </div>
 
 <footer>
-  &copy; <span id="year"></span> Badibanga Moushe – Tous droits réservés.
+  &copy; <span id="year"></span> Bourse sportive congolaise – Tous droits réservés.
 </footer>
 
 <script>
